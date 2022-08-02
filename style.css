@@ -1,0 +1,99 @@
+:root {
+  --fill-color: #f9f9f9;
+  --shadow-color: grey;
+}
+
+body {
+  background: var(--fill-color);
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body * {
+  /* border: 1px solid purple; */
+}
+
+.header {
+  background: white;
+  box-shadow: 0px 2px 3px var(--shadow-color);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  width: 80%;
+}
+
+.library {
+  flex-grow: 1;
+  width: 80%;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.library article {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 5px var(--shadow-color);
+  background: white;
+}
+
+.bookTitle {
+  font-style: italic;
+  font-weight: bold;
+}
+
+article button {
+  width: 80%;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+button[class="Read"] {
+  background-color: #90ef90;
+}
+
+button[class="Not Read"] {
+  background-color: #fc6c85;
+}
+
+button.deleteBtn {
+  background-color: var(--fill-color);
+}
+
+.add-book p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.add-book svg {
+  width: 50%;
+  height: 50%;
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+}
+
+.gh-link {
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+}
