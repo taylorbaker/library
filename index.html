@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <title>Library</title>
   <link rel="stylesheet" href="./style.css">
-  <script rel="text/javascript" src="./script.js"></script>
+  <script rel="text/javascript" src="./script.js" defer></script>
   <link rel="icon" href="./icons/book.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet"> 
 </head>
 <body>
+
   <div class="header">
-    <h1 class="title">Library</h1>
+    <h1 class="pageTitle">Library</h1>
   </div>
 
   <div class="library">
-    <article class="add-book">
+    <article id="add-book">
       <svg
          width="560pt"
          height="560pt"
@@ -172,5 +173,29 @@
       </svg>
     </a>
   </footer>
+
+  <div id="addBookModal" class="modal">
+    <span class="close-btn">X</span>
+    <form action="#" class="modal-container">
+      <div class="title-container">
+        <label for="bookTitle">Title:</label>
+        <input type="text" id="bookTitle" name="title" required>
+      </div>
+      <div class="author-container">
+        <label for="bookAuthor">Author:</label>
+        <input type="text" id="bookAuthor" name="author" required>
+      </div>
+      <div class="page-count-container">
+        <label for="bookPageCount">Page Count:</label>
+        <input type="number" max=1500 id="bookPageCount" name="pageCount" required>
+      </div>
+      <div class="read-status-container">
+        <label for="readStatus">Book Read?</label>
+        <input type="checkbox" id="readStatus" value="read">
+      </div>
+      <input type="submit" value="Add Book"id="submitBtn">
+    </form>
+  </div>
+
 </body>
 </html>
