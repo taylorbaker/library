@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 let myLibrary = []; 
+>>>>>>> 6c9eae2b1809b137536a370f3c5fb4a5d7767ced
 
 function Book(title, author, pageCount, read) {
     this.title = title,
