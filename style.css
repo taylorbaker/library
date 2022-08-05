@@ -73,14 +73,76 @@ button.deleteBtn {
   background-color: var(--fill-color);
 }
 
-.add-book p {
+#add-book p {
   font-size: 24px;
   font-weight: bold;
 }
 
-.add-book svg {
+#add-book svg {
   width: 50%;
   height: 50%;
+}
+
+#add-book:hover {
+  cursor: pointer;
+  background: rgba(194, 194, 194, 0.05);
+}
+
+#addBookModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* offset position based on modal dimensions */
+  height: clamp(175px, 50%, 250px);
+  z-index: 1;
+  border-radius: 15px;
+  background: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 5px var(--shadow-color);
+}
+
+#addBookModal span {
+  margin: 5px 10px 0px 0px;
+  align-self: end;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70%;
+  margin: 20px;
+}
+
+/* remove input[type=number] arrows/spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#submitBtn {
+  width: 80%;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: var(--fill-color);
+}
+
+.close-btn:hover,
+#submitBtn:hover {
+  cursor: pointer;
 }
 
 .footer {
